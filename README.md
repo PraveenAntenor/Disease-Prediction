@@ -39,8 +39,11 @@ This project is a web application that predicts diseases based on user input usi
 
 ## Screenshots
  Here are some screenshots of the project:
- 
- ![2](https://github.com/user-attachments/assets/ed359ba7-a94c-44a9-abf4-d02074808780)
 
- ![Screenshot 2](images/2.png)
- ![Screenshot 3](images/3.png)
+ ![1](https://github.com/user-attachments/assets/bc205233-b42e-4761-a9e0-fe7e040c1496)
+
+ ![2](https://github.com/user-attachments/assets/ed359ba7-a94c-44a9-abf4-d02074808780)
+ ![3](https://github.com/user-attachments/assets/f9a2b1f3-f1cc-4d54-90c1-cfc331308fc9)
+
+
+ 
