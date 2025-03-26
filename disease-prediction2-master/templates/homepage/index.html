@@ -1,0 +1,153 @@
+﻿{% extends "basic.html" %}
+{% load static %}
+
+{% block head %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f8f9fa;
+        color: white;
+    }
+    .jumbotron {
+        background: transparent;
+        color: white;
+        text-align: center;
+        padding: 4rem 2rem;
+        border-radius: 10px;
+    }
+    .jumbotron h1 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .jumbotron .btn-primary {
+        background-color: #ff5722;
+        border: none;
+        font-size: 1.2rem;
+        padding: 0.8rem 2rem;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+    }
+    .jumbotron .btn-primary:hover {
+        background-color: #e64a19;
+        transform: scale(1.05);
+    }
+    .img {
+        width: 150px;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+    .img:hover {
+        transform: scale(1.1);
+    }
+    .modal-content {
+        border-radius: 20px;
+        padding: 2rem;
+    }
+    .modal-content h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        font-weight: bold;
+        color: #007bff;
+    }
+    #footer {
+      margin-top: 3rem;
+      background-color: #13121A !important; /* Footer background color */
+      color: white;
+      padding: 2rem 0;
+  }
+  #footer ul {
+      list-style: none;
+      padding: 0;
+  }
+  #footer ul li h5 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+  }
+  #footer a {
+      color: #ff5722;
+      text-decoration: none;
+  }
+  #footer a:hover {
+      text-decoration: underline;
+  }
+</style>
+{% endblock %}
+
+{% block body %}
+
+<div class="jumbotron">
+    <h1 class="display-4">Your Virtual Health Assistant</h1>
+    <p class="lead">
+        Welcome to the Virtual Health Assistant, a cutting-edge platform powered by advanced AI models. 
+        This system is designed to provide instant health insights and guidance by analyzing your symptoms 
+        and suggesting potential conditions. Get started now and take charge of your health!
+    </p>
+
+    {% if user.is_authenticated %}
+    <p class="lead">Welcome back, {{ user.username }}!</p>
+    {% else %}
+    <p class="lead">
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".bd-example-modal-lg">
+            Get Started
+        </button>
+    </p>
+    {% endif %}
+</div>
+
+
+<!-- Large modal for Sign-In -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <center>
+                <h1>Sign-In</h1>
+            </center>
+            <br><br>
+            <center>
+                <form>
+                    <div class="container mt-5 mb-5">
+                        <div class="row justify-content-center">
+                            <div class="col-auto">
+                                <a href="{% url 'sign_in_patient' %}">
+                                    <img alt="patient" src="{% static 'homepage/patient.png' %}" class="img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </center>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div id="footer" class="card bg-dark text-white">
+  <div class="card-body">
+      <h5>Contact:</h5>
+      <ul>
+          <li>
+              <h5 class="mb-1">Email: Test@email.com</h5>
+          </li>
+          <li>
+              <h5 class="mb-1">Contact No.: 98705</h5>
+          </li>
+          <li>
+              <h5 class="mb-1">Address: UVCE</h5>
+              <div class="footer-copyright text-center">
+                  © 2024 Copyright:
+                  <a href="#">VirtualHealthAssistant.com</a>
+              </div>
+          </li>
+      </ul>
+  </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+{% endblock %}
