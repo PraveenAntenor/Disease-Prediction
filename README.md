@@ -10,8 +10,8 @@ This project is a web application that predicts diseases based on user input usi
  - Responsive design for mobile and desktop users.
 
 ## The System Architecture
- ![System Architecture](images/![System-Arch](https://github.com/user-attachments/assets/fc6862cd-b259-4773-801b-44c6b509092e)
-)
+ /![System-Arch](https://github.com/user-attachments/assets/fc6862cd-b259-4773-801b-44c6b509092e)
+
 
 ## Installation
 To set up the project locally, follow these steps:
