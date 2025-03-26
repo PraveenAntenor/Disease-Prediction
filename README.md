@@ -18,7 +18,7 @@ This project is a web application that predicts diseases based on user input usi
  
  1. Clone the repository:
     ```bash
-    git clone https://github.com/Ganesh57803/disease-prediction2.git
+    git clone https://github.com/PraveenAntenor/Disease-Prediction.git
     ```
  2. Navigate to the project directory:
     ```bash
