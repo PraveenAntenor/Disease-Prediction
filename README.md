@@ -14,4 +14,25 @@ This project is a web application that predicts diseases based on user input usi
 
 
 ## Installation
-To set up the project locally, follow these steps:
+ To set up the project locally, follow these steps:
+ 
+ 1. Clone the repository:
+    ```bash
+    git clone https://github.com/Ganesh57803/disease-prediction2.git
+    ```
+ 2. Navigate to the project directory:
+    ```bash
+    cd disease-prediction
+    ```
+ 3. Install the required packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
+ 4. Run the application:
+    ```bash
+    python manage.py runserver
+    ```
+ 
+ ## Usage
+ - Open your web browser and go to `http:localhost:8000/`.
+ - Input your symptoms and click on the "Check Disease" button to receive predictions.
